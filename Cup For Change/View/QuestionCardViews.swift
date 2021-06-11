@@ -9,8 +9,6 @@ import SwiftUI
 
 struct QuestionCardViews: View {
     
-var question: Question
-
 var body: some View {
     NavigationView {
         VStack {
@@ -96,31 +94,95 @@ var body: some View {
   }
     
 }
-    struct secondView: View {
+struct secondView: View {
     var body: some View {
-        VStack {
-        VStack(alignment: .leading) {
-            Text("Turtle Rock")
-                .font(.title)
-            HStack(alignment: .top) {
-                Text("Joshua Tree National Park")
-                    .font(.subheadline)
-                Spacer()
-                Text("California")
-                    .font(.subheadline)
-            }
+        NavigationView {
+            VStack {
+                ZStack {
+                    LinearGradient(gradient: Gradient(colors:[Color("ColorPink4"), Color("ColorPink8")]), startPoint: .top, endPoint: .bottom)
+                    VStack {
+                        Text("Question 2")
+                            .fontWeight(.heavy)
+                            .font(.largeTitle)
+                            .padding(.vertical, 10)
+                        Text("How often do you exercise?")
+                            .fontWeight(.bold)
+                            .font(.title2)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 20)
+                            .multilineTextAlignment(.center)
+                    }
+                }
+                VStack {
+                
+                // MARK: BUTTON 1
+                    NavigationLink(destination: secondView()) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "arrow.right.circle")
+                            .foregroundColor(.white)
+                          .imageScale(.large)
+                        Text("Never, no thank you")
+                            .foregroundColor(.white)
+                    }
+                        .frame(width: 320, height: 50, alignment: .center)
+                        .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(lineWidth: 1)
+                                .background(LinearGradient(gradient: Gradient(colors: [Color("ColorPink3"), Color("ColorPink2")]), startPoint: .top, endPoint: .bottom).cornerRadius(20))
+                        )
+                    }
+                    .padding(.vertical, 10)
+                    .accentColor(Color.white)
+                    Divider().padding(.vertical, 2)
+                    
+                // MARK: BUTTON 2
+                    NavigationLink(destination: secondView()) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "arrow.right.circle")
+                            .foregroundColor(.white)
+                          .imageScale(.large)
+                        Text("Sometimes, when I'm motivated")
+                            .foregroundColor(.white)
+                    }
+                        .frame(width: 320, height: 50, alignment: .center)
+                        .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(lineWidth: 1)
+                                .background(LinearGradient(gradient: Gradient(colors: [Color("ColorPink3"), Color("ColorPink2")]), startPoint: .top, endPoint: .bottom).cornerRadius(20))
+                        )
+                    }
+                    .padding(.vertical, 10)
+                    .accentColor(Color.white)
+                    Divider().padding(.vertical, 2)
+                    
+                // MARK: BUTTON 3
+                    NavigationLink(destination: secondView()) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "arrow.right.circle")
+                            .foregroundColor(.white)
+                          .imageScale(.large)
+                        Text("Frequently, exercise is a must!")
+                            .foregroundColor(.white)
+                    }
+                        .frame(width: 320, height: 50, alignment: .center)
+                        .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(lineWidth: 1)
+                                .background(LinearGradient(gradient: Gradient(colors: [Color("ColorPink3"), Color("ColorPink2")]), startPoint: .top, endPoint: .bottom).cornerRadius(20))
+                        )
+                    }
+                    .padding(.vertical, 10)
+                    .accentColor(Color.white)
+                        Divider().padding(.vertical, 2)
+          }
         }
-        .padding()
-            Spacer()
-
-        }
+        .navigationBarTitle("Flow Quiz", displayMode: .inline)
       }
     }
-
+}
 struct QuestionCardViews_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionCardViews(question: questionAndButtonText[0])
+        QuestionCardViews()
     }
 }
 }
-

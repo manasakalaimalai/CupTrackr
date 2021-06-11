@@ -16,10 +16,8 @@
 		9BA6E060267349710086599B /* QuestionButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E05F267349710086599B /* QuestionButtonDesign.swift */; };
 		9BA6E062267349EC0086599B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E061267349EC0086599B /* Question.swift */; };
 		9BA6E06426734B280086599B /* questionButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E06326734B280086599B /* questionButtonText.swift */; };
-		9BA6E066267350740086599B /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E065267350740086599B /* QuestionView.swift */; };
 		9BA6E068267389FA0086599B /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E067267389FA0086599B /* QuestionCardView.swift */; };
 		9BA6E06C267390F50086599B /* QuestionCardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E06B267390F50086599B /* QuestionCardViews.swift */; };
-		9BA6E06E26739B230086599B /* QuestionView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E06D26739B230086599B /* QuestionView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +32,8 @@
 		9BA6E05F267349710086599B /* QuestionButtonDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionButtonDesign.swift; sourceTree = "<group>"; };
 		9BA6E061267349EC0086599B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9BA6E06326734B280086599B /* questionButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionButtonText.swift; sourceTree = "<group>"; };
-		9BA6E065267350740086599B /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		9BA6E067267389FA0086599B /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
 		9BA6E06B267390F50086599B /* QuestionCardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardViews.swift; sourceTree = "<group>"; };
-		9BA6E06D26739B230086599B /* QuestionView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +109,6 @@
 				9BA6E05B2672472B0086599B /* BeginQuizButton.swift */,
 				9BA6E05F267349710086599B /* QuestionButtonDesign.swift */,
 				9BA6E067267389FA0086599B /* QuestionCardView.swift */,
-				9BA6E065267350740086599B /* QuestionView.swift */,
-				9BA6E06D26739B230086599B /* QuestionView2.swift */,
 				9BA6E06B267390F50086599B /* QuestionCardViews.swift */,
 			);
 			path = View;
@@ -197,7 +191,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BA6E066267350740086599B /* QuestionView.swift in Sources */,
 				9BA6E05A267242A00086599B /* OnboardingView.swift in Sources */,
 				9BA6E04926723E330086599B /* ContentView.swift in Sources */,
 				9BA6E05C2672472B0086599B /* BeginQuizButton.swift in Sources */,
@@ -205,7 +198,6 @@
 				9BA6E068267389FA0086599B /* QuestionCardView.swift in Sources */,
 				9BA6E060267349710086599B /* QuestionButtonDesign.swift in Sources */,
 				9BA6E06426734B280086599B /* questionButtonText.swift in Sources */,
-				9BA6E06E26739B230086599B /* QuestionView2.swift in Sources */,
 				9BA6E06C267390F50086599B /* QuestionCardViews.swift in Sources */,
 				9BA6E04726723E330086599B /* Cup_For_ChangeApp.swift in Sources */,
 			);
