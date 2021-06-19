@@ -12,12 +12,13 @@
 		9BA6E04B26723E350086599B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA6E04A26723E350086599B /* Assets.xcassets */; };
 		9BA6E04E26723E350086599B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA6E04D26723E350086599B /* Preview Assets.xcassets */; };
 		9BA6E05A267242A00086599B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E059267242A00086599B /* OnboardingView.swift */; };
-		9BA6E05C2672472B0086599B /* BeginQuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E05B2672472B0086599B /* BeginQuizButton.swift */; };
-		9BA6E060267349710086599B /* QuestionButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E05F267349710086599B /* QuestionButtonDesign.swift */; };
-		9BA6E062267349EC0086599B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E061267349EC0086599B /* Question.swift */; };
-		9BA6E06426734B280086599B /* questionButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E06326734B280086599B /* questionButtonText.swift */; };
-		9BA6E068267389FA0086599B /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E067267389FA0086599B /* QuestionCardView.swift */; };
-		9BA6E06C267390F50086599B /* QuestionCardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6E06B267390F50086599B /* QuestionCardViews.swift */; };
+		9BB2BBB4267CC3A0006DF157 /* OrigOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2BBB3267CC3A0006DF157 /* OrigOnboardingView.swift */; };
+		9BB2BBB6267CC424006DF157 /* EducationalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2BBB5267CC424006DF157 /* EducationalView.swift */; };
+		9BB2BBB8267CC43B006DF157 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2BBB7267CC43B006DF157 /* HomeView.swift */; };
+		9BB2BBBA267CC44F006DF157 /* FlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2BBB9267CC44F006DF157 /* FlowView.swift */; };
+		9BB2BBBC267CC495006DF157 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2BBBB267CC495006DF157 /* MapView.swift */; };
+		9BB2BBBE267CC4B7006DF157 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2BBBD267CC4B7006DF157 /* HelpView.swift */; };
+		9BB2BBC3267E289E006DF157 /* OrgLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2BBC2267E289E006DF157 /* OrgLocationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +29,13 @@
 		9BA6E04D26723E350086599B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9BA6E04F26723E350086599B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BA6E059267242A00086599B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		9BA6E05B2672472B0086599B /* BeginQuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginQuizButton.swift; sourceTree = "<group>"; };
-		9BA6E05F267349710086599B /* QuestionButtonDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionButtonDesign.swift; sourceTree = "<group>"; };
-		9BA6E061267349EC0086599B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		9BA6E06326734B280086599B /* questionButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionButtonText.swift; sourceTree = "<group>"; };
-		9BA6E067267389FA0086599B /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
-		9BA6E06B267390F50086599B /* QuestionCardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardViews.swift; sourceTree = "<group>"; };
+		9BB2BBB3267CC3A0006DF157 /* OrigOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigOnboardingView.swift; sourceTree = "<group>"; };
+		9BB2BBB5267CC424006DF157 /* EducationalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationalView.swift; sourceTree = "<group>"; };
+		9BB2BBB7267CC43B006DF157 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9BB2BBB9267CC44F006DF157 /* FlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowView.swift; sourceTree = "<group>"; };
+		9BB2BBBB267CC495006DF157 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9BB2BBBD267CC4B7006DF157 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		9BB2BBC2267E289E006DF157 /* OrgLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgLocationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +90,15 @@
 		9BA6E055267242190086599B /* App */ = {
 			isa = PBXGroup;
 			children = (
+				9BB2BBB3267CC3A0006DF157 /* OrigOnboardingView.swift */,
 				9BA6E04626723E330086599B /* Cup_For_ChangeApp.swift */,
 				9BA6E04826723E330086599B /* ContentView.swift */,
 				9BA6E059267242A00086599B /* OnboardingView.swift */,
+				9BB2BBB7267CC43B006DF157 /* HomeView.swift */,
+				9BB2BBB5267CC424006DF157 /* EducationalView.swift */,
+				9BB2BBB9267CC44F006DF157 /* FlowView.swift */,
+				9BB2BBBB267CC495006DF157 /* MapView.swift */,
+				9BB2BBBD267CC4B7006DF157 /* HelpView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -98,7 +106,6 @@
 		9BA6E056267242220086599B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9BA6E06326734B280086599B /* questionButtonText.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -106,10 +113,6 @@
 		9BA6E0572672423E0086599B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9BA6E05B2672472B0086599B /* BeginQuizButton.swift */,
-				9BA6E05F267349710086599B /* QuestionButtonDesign.swift */,
-				9BA6E067267389FA0086599B /* QuestionCardView.swift */,
-				9BA6E06B267390F50086599B /* QuestionCardViews.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,7 +120,7 @@
 		9BA6E0582672424B0086599B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9BA6E061267349EC0086599B /* Question.swift */,
+				9BB2BBC2267E289E006DF157 /* OrgLocationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,13 +195,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BA6E05A267242A00086599B /* OnboardingView.swift in Sources */,
+				9BB2BBBC267CC495006DF157 /* MapView.swift in Sources */,
+				9BB2BBBA267CC44F006DF157 /* FlowView.swift in Sources */,
+				9BB2BBC3267E289E006DF157 /* OrgLocationModel.swift in Sources */,
+				9BB2BBB6267CC424006DF157 /* EducationalView.swift in Sources */,
+				9BB2BBBE267CC4B7006DF157 /* HelpView.swift in Sources */,
 				9BA6E04926723E330086599B /* ContentView.swift in Sources */,
-				9BA6E05C2672472B0086599B /* BeginQuizButton.swift in Sources */,
-				9BA6E062267349EC0086599B /* Question.swift in Sources */,
-				9BA6E068267389FA0086599B /* QuestionCardView.swift in Sources */,
-				9BA6E060267349710086599B /* QuestionButtonDesign.swift in Sources */,
-				9BA6E06426734B280086599B /* questionButtonText.swift in Sources */,
-				9BA6E06C267390F50086599B /* QuestionCardViews.swift in Sources */,
+				9BB2BBB8267CC43B006DF157 /* HomeView.swift in Sources */,
+				9BB2BBB4267CC3A0006DF157 /* OrigOnboardingView.swift in Sources */,
 				9BA6E04726723E330086599B /* Cup_For_ChangeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
