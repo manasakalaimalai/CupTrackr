@@ -6,23 +6,22 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
-struct FructusApp: App {
+struct CupForChangeApp: App {
     
-    @AppStorage("isOnboarding") var isOnboarding: Bool = true
-
-
+    init() {
+     FirebaseApp.configure()
+    }
     
+    @AppStorage("isOnboarding") var isOnboarding: Bool = false
   
   var body: some Scene {
     WindowGroup {
-        if isOnboarding {
-        OnboardingView()
-        } else {
-        ContentView()
-        }
         
+        ContentView()
+   
     }
 }
 

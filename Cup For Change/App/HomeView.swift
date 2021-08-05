@@ -8,12 +8,52 @@
 import SwiftUI
 
 struct HomeView: View {
+        
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack {
+//                NavigationBarView()
+//                    .padding(.bottom)
+//                    .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+//                    .background(LinearGradient(gradient: Gradient(colors: [Color("ColorPink1"), Color("ColorPink6")]), startPoint: .top, endPoint: .bottom))
+
+                TabView {
+                    FirstScreenView()
+                        .tabItem {
+                            Image(systemName: "house")
+                            Text("Home")
+                        }
+                    EducationalView()
+                        .tabItem {
+                            Image(systemName: "book.circle")
+                            Text("Learn")
+                        }
+                    FlowView()
+                        .tabItem {
+                            Image(systemName: "gauge")
+                                .foregroundColor(.blue)
+                            Text("Flow Tracker")
+                        }
+                    MapView()
+                        .tabItem {
+                            Image(systemName: "map")
+                            Text("Locations")
+                        }
+                    HelpView()
+                        .tabItem {
+                            Image(systemName: "bandage")
+                            Text("Resources")
+                        }
+                }
+            } //: VSTACK
+            .background(Color.blue.ignoresSafeArea(.all, edges: .all))       
+        } //: ZSTACK
+        .ignoresSafeArea(.all, edges: .top)
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
+    static let learners: [Learner] = Bundle.main.decode("learn.json")
     static var previews: some View {
         HomeView()
     }

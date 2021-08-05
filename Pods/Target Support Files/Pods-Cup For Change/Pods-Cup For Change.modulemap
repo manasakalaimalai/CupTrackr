@@ -1,0 +1,6 @@
+framework module Pods_Cup_For_Change {
+  umbrella header "Pods-Cup For Change-umbrella.h"
+
+  export *
+  module * { export * }
+}

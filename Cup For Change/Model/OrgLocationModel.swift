@@ -8,12 +8,17 @@
 import Foundation
 import MapKit
 
-struct NationalParkLocation: Codable, Identifiable {
+struct SustainableOrgLocations: Codable, Identifiable {
     let id: String
     let name: String
+    let place: String
+    let description: String
+    let websitelink: String
+    let image: String
     let latitude: Double
     let longitude: Double
-    let place: String
+    let link: String
+    let number: String
     
     // Computed Map Property
     

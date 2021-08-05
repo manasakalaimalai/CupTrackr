@@ -1,0 +1,30 @@
+[
+   {
+      "id":0,
+      "title":"How To Safely Dispose Your Pad",
+      "image":"image1",
+      "color1":"ColorPink4",
+      "color2":"ColorPink6"
+   },
+   {
+      "id":1,
+      "title":"How to Wash Your Reusable Pad",
+      "image":"image1",
+      "color1":"ColorPink5",
+      "color2":"ColorPink12"
+   },
+   {
+      "id":2,
+      "title":"How to Wash Your Menstrual Cup",
+      "image":"image1",
+      "color1":"ColorPink4",
+      "color2":"ColorPink6"
+   },
+   {
+      "id":3,
+      "title":"Why You Should Use Sustainable Menstrual Products",
+      "image":"image1",
+      "color1":"ColorPink5",
+      "color2":"ColorPink12"
+   }
+]
