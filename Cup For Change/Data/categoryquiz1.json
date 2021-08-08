@@ -2,17 +2,27 @@
    {
       "id": 1,
       "name": "Quiz 1"
+      "title": "Ammenhorea"
    },
    {
        "id": 2,
        "name": "Quiz 2"
+       "title": "Phases of the Menstrual Cycle"
    },
    {
        "id": 3,
        "name": "Quiz 3"
+       "title": "Waste produced by different menstrual products"
    },
    {
        "id": 4,
        "name": "Quiz 4"
+       "title": "Pain during periods"
+
+   },
+   {
+       "id": 5,
+       "name": "Quiz 5"
+       "title": "Menstrual Cups"
    }
 ]
