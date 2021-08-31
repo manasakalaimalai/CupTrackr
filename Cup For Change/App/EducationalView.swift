@@ -12,89 +12,134 @@ struct EducationalView: View {
 
     @State var index = 0
     
-    @State var showArticles = false
+    @State var selectedTab = header_title[0]
     
-    @State var showQuizzes = false
+    @Namespace var animation
+    
+//    let newColor = UIColor(red: 194, green: 216, blue: 211)
 
 // MARK: HOME
     var body: some View {
          
-        NavigationView {
-            ScrollView(.vertical, showsIndicators: false) {
+        NavigationView() {
+            ScrollView(.vertical, showsIndicators: false, content: {
                 VStack {
-                    
                     // ARTICLES & QUIZZES TITLE //
-                    HStack {
-                       
-                            Text("Articles")
-                                .font(.caption)
-                                .foregroundColor(index == 0 ? .white: Color("ColorPink4").opacity(0.90))
+                    
+                    HStack(spacing: 0) {
+                        ForEach(header_title, id: \.self) { header in
+                            
+                            Spacer()
+                            
+                            ArticleHeader(title: header, selectedTab: $selectedTab, animation: animation)
+                            
+                            Spacer()
+                        }
+                    }
+                    .padding(.horizontal, 60)
+                    .padding(.top, 50)
+                    
+                    // ARTICLES
+                    
+                    if selectedTab == header_title[0] {
+ 
+                        // ARTICLE SECTION 1 //
+                        HStack {
+                            Text("Sustainable Menstruation")
+                                .foregroundColor(Color("ColorPink16"))
                                 .fontWeight(.bold)
-                                .padding(.vertical, 6)
-                                .padding(.horizontal, 20)
-                                .background(Color("ColorPink6").opacity(index == 0 ? 1 : 0.2))
-                                .clipShape(Capsule())
-                                .onTapGesture {
-                                    index = 0
-                                }
+                            Spacer()
+                        }
+                        .padding(.horizontal, 65)
+                        .padding(.top, 40)
+                        .padding(.bottom, 10)
+                            
+                        // SCROLL CARD VIEW 1 //
+                        ArticleScrollView()
+                        
+                        Spacer(minLength: 0)
+                        
+                        // ARTICLE SECTION 2 //
+                        HStack {
+                            Text("Menstrual Hygiene Management")
+                                .foregroundColor(Color("ColorPink16")).fontWeight(.bold)
+                            Spacer()
+                        }
+                        .padding(.horizontal, 65)
+                        .padding(.top, 20)
+                        .padding(.bottom, 10)
 
-                            Text("Quizzes")
-                                .font(.caption)
-                                .foregroundColor(index == 1 ? .white : .white.opacity(0.70))
-                                .fontWeight(.bold)
-                                .padding(.vertical, 6)
-                                .padding(.horizontal, 20)
-                                .background(Color("ColorPink6").opacity(index == 1 ? 1 : 0.2))
-                                .clipShape(Capsule())
-                                .onTapGesture {
-                                    index = 1
-                                }
-
-                        Spacer()
-
-                    }
-                    .padding(.horizontal)
-                    .padding(.bottom, 30)
-                    
-                    // ARTICLE SECTION 1 //
-                    HStack {
-                        Text("Sustainable Menstruation")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                        Spacer()
-                    }
+                        // SCROLL CARD VIEW 2 //
+                        ArticleTwoScrollView()
                         .padding(.horizontal, 32)
-                    
-                    // SCROLL CARD VIEW 2 //
-                    ArticleScrollView()
-                    
-                    // ARTICLE SECTION 2 //
-                    HStack {
-                        Text("Menstrual Hygiene Management")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                        Spacer()
                     }
-                        .padding(.horizontal, 32)
                     
-                    // SCROLL CARD VIEW 2 //
-                    ArticleTwoScrollView()
+                    // QUIZZES
+                    
+                    if selectedTab == header_title[1] {
+                        GridView(quizzes: quizzes)
+                        
+                    }
                 }
-
-              
-            }
-            .background(
-                LinearGradient(gradient: Gradient(colors: [Color("ColorPink14"), Color("ColorPink4")]), startPoint: .top, endPoint: .bottom)
-                    .edgesIgnoringSafeArea(.all)
-            )
-            .navigationTitle("Learn")
+                .edgesIgnoringSafeArea(.all)
+            })
+            .background(Color(.gray).opacity(0.12).edgesIgnoringSafeArea(.all))
+            .navigationBarTitle("Learn")
+            .navigationBarTitleDisplayMode(.automatic)
+            .padding(.top, 0.2)
             
+            .navigationBarTitle("learn")
+            .navigationBarHidden(true)
         }
     }
 }
 
+// QUIZZES LIST VIEW //
+struct GridView: View {
+    
+    var quizzes: [Quiz]
+    
+    var body: some View {
+        
+        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 1), spacing: 0, content: {
+            
+            ForEach(quizzes) {quiz in
+
+                ZStack {
+                    
+                    VStack(spacing : 10) {
+                        NavigationLink(destination: SingleQuizView(quiz: quiz)) {
+                            SingleCardView(quiz: quiz)
+                        }
+                                        
+                    } // END OF VSTACK
+                    .padding(10)
+                    
+                } // END OF ZSTACK
+                
+            } // END OF LOOP
+        }) // END OF LAZYVGRID
+        .padding()
+    }
+
+}
+
+// PREVIEW //
 struct EducationalView_Previews: PreviewProvider {
     static var previews: some View {
         EducationalView()
     }
 }
+
+//// NAVIGATION BAR COLOR //
+//extension UIColor {
+//    convenience init(red: Int, green: Int, blue: Int) {
+//        let newRed = CGFloat(red)/255
+//        let newGreen = CGFloat(green)/255
+//        let newBlue = CGFloat(blue)/255
+//
+//        self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
+//    }
+//}
+
+var header_title = ["Article", "Quizzes"]

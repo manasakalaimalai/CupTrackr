@@ -15,12 +15,29 @@ struct LearnerItemView: View {
 // MARK: BODY
     var body: some View {
         
-        Image(learner.image)
-            .resizable()
-            .scaledToFill()
-            .padding(.horizontal, 15)
-            .background(LinearGradient(gradient: Gradient(colors: [Color("ColorPink4"), Color("ColorPink2")]), startPoint: .leading, endPoint: .trailing))
-            .cornerRadius(30)
+        VStack {
+            Text(learner.affirmation)
+                .font(.title2)
+                .fontWeight(.heavy)
+                .foregroundColor(.white)
+                .padding(.top, 15)
+                .padding(.bottom, 5)
+                .padding(.horizontal, 25)
+                .multilineTextAlignment(.center)
+            Text("____________________________")
+                .foregroundColor(.white)
+            Text(learner.name)
+                .font(.title3)
+                .fontWeight(.heavy)
+                .kerning(1)
+                .foregroundColor(Color("pastel13"))
+                .padding(.top, 5)
+                .padding(.bottom, 15)
+        }
+        .frame(width: UIScreen.main.bounds.width/1.03, height: 240)
+        .background(LinearGradient(gradient: Gradient(colors: [Color("pastel6"), Color("pastel11")]), startPoint: .leading, endPoint: .trailing))
+        .cornerRadius(30)
+
     
     }
 }
@@ -28,8 +45,5 @@ struct LearnerItemView: View {
 struct LearnerItemView_Previews: PreviewProvider {
     static var previews: some View {
         LearnerItemView(learner: learners[0])
-            .previewLayout(.sizeThatFits)
-            .padding()
-            .background(Color.black)
     }
 }

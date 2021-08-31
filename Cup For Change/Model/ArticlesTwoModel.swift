@@ -11,7 +11,7 @@ import CoreGraphics
 
 struct ArticleTwo: Codable, Identifiable {
     var id: Int
-    var title: String
+    var name: String
     var image: String
     var color1: String
     var color2: String

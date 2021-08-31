@@ -1,0 +1,22 @@
+[
+   {
+      "id": 1,
+      "question": "How Would You Describe Your Period Flow?",
+      "answers": ["Consistently Light", "Abnormal", "Consistently Heavy", "Stable"],
+   },
+   {
+       "id": 2,
+       "question": "Which Age Group Do You Fall Under?",
+       "answers": ["45+", "35-45", "25-35", "16-25"],
+   },
+   {
+       "id": 3,
+       "question": "How Many Days Do Your Periods Usually Last?",
+       "answers": ["2-4 days", "Changes every month", "More than a week", "3-7 days"],
+   },
+   {
+       "id": 4,
+       "question": "Have you had any of the following?",
+       "answers": ["Currently have high stress levels, high weight loss, OR exercise excessively", "PCOS/PCOD", "Menorrhagia/Hormonal problems", "No, I haven't"],
+   }
+]

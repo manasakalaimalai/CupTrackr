@@ -18,11 +18,6 @@ struct HomeView: View {
 //                    .background(LinearGradient(gradient: Gradient(colors: [Color("ColorPink1"), Color("ColorPink6")]), startPoint: .top, endPoint: .bottom))
 
                 TabView {
-                    FirstScreenView()
-                        .tabItem {
-                            Image(systemName: "house")
-                            Text("Home")
-                        }
                     EducationalView()
                         .tabItem {
                             Image(systemName: "book.circle")
@@ -34,15 +29,15 @@ struct HomeView: View {
                                 .foregroundColor(.blue)
                             Text("Flow Tracker")
                         }
-                    MapView()
-                        .tabItem {
-                            Image(systemName: "map")
-                            Text("Locations")
-                        }
                     HelpView()
                         .tabItem {
                             Image(systemName: "bandage")
                             Text("Resources")
+                        }
+                    MapView()
+                        .tabItem {
+                            Image(systemName: "map")
+                            Text("Locations")
                         }
                 }
             } //: VSTACK

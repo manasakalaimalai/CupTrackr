@@ -8,6 +8,9 @@
 import Foundation
 
 struct Learner: Codable, Identifiable {
-    let id: Int
-    let image: String
+    var id: Int
+    var image: String
+    var name: String
+    var affirmation: String
+
 }

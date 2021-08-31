@@ -14,9 +14,10 @@ struct LearnerTabView: View {
             ForEach(learners) { learner in
                 LearnerItemView(learner: learner)
                     .padding(.top, 10)
-                    .padding(.horizontal, 15)
                     .scaledToFit()
             }
+            .frame(width: UIScreen.main.bounds.width/1.03, height: 200)
+
         } //: TAB
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
     }

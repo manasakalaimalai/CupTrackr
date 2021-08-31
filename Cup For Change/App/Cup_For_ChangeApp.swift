@@ -7,22 +7,26 @@
 
 import SwiftUI
 import Firebase
+import FirebaseCore
 
 @main
 struct CupForChangeApp: App {
-    
-    init() {
-     FirebaseApp.configure()
-    }
-    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate 
     @AppStorage("isOnboarding") var isOnboarding: Bool = false
   
-  var body: some Scene {
-    WindowGroup {
-        
-        ContentView()
-   
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
     }
 }
 
+// initializing Firebase
+
+class AppDelegate : NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        FirebaseApp.configure()
+        return true
+    }
 }

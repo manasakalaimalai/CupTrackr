@@ -17,25 +17,31 @@ struct ArticleCardView: View {
         
         VStack {
             Text(article.name)
-                .foregroundColor(.white)
-                .font(.headline)
-                .fontWeight(.medium)
+                .foregroundColor(Color.white)
+                .font(.callout)
+                .fontWeight(.bold)
                 .kerning(1.0)
-                .padding(20)
+                .padding(.top, 20)
+                .padding(.bottom, 30)
+                .padding(.horizontal, 10)
             Image(article.image)
                 .resizable()
                 .scaledToFit()
                 .padding(.horizontal, 30)
+                .padding(.bottom, 10)
+                .opacity(0.8)
+                .frame(width: 200, height: 100)
         }
-        .frame(width: 250, height: 330)
-        .background(LinearGradient(gradient: Gradient(colors: [Color(article.color1), Color(article.color2)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        .frame(width: 200, height: 250)
+        .background(LinearGradient(gradient: Gradient(colors: [Color(article.color1), Color(article.color2)]), startPoint: .leading, endPoint: .trailing))
         .cornerRadius(20)
-        .shadow(color: Color("ColorPink8"), radius: 5, x: 0.0, y: 0.0)
+        .shadow(color: Color("ColorPink8"), radius: 5, x: 5.0, y: 5.0)
+        .padding(.vertical)
     }
 }
 
 struct ArticleCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleCardView(article: articles[0])
+        ArticleCardView(article: articles[3])
     }
 }

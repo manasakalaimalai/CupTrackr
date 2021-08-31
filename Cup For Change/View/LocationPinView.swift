@@ -140,10 +140,10 @@ struct LocationPinView: View {
                 } //: GROUP BOX
                 .padding(.horizontal)
                 //: END OF PHONE NUMBER LINK
-            }
+            } // END OF VSTACK
             .background(Color.white)
         
-        } //: END OF VSTACK
+        } //: END OF SCROLLVIEW
         }
     }
 }
