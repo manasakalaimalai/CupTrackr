@@ -188,6 +188,7 @@ struct HelpView: View {
                                 .fontWeight(.heavy)
                                 .foregroundColor(Color("pastel13"))
                                 .padding(.top, 20)
+                            
                             HStack(spacing: 0) {
                                 ForEach(mood_top, id: \.self) { mood in
                                     
@@ -201,18 +202,19 @@ struct HelpView: View {
                             .frame(width: UIScreen.main.bounds.width/1.3)
                             .padding(.horizontal, 20)
                             
-                            HStack {
-                                Spacer()
-                                Text("symptoms you might be having")
-                                    .font(.body)
-                                    .foregroundColor(Color("ColorPink16").opacity(0.6))
-                                    .fontWeight(.black)
-                                    .padding(.bottom, 30)
-                                Spacer()
+                            VStack {
+                                HStack {
+                                    Spacer()
+                                    Text("symptoms you might be having")
+                                        .font(.body)
+                                        .foregroundColor(Color("ColorPink16").opacity(0.6))
+                                        .fontWeight(.black)
+                                        .padding(.bottom, 30)
+                                    Spacer()
+                                }
+                                MoodArticlesView()
                             }
-                            
-                            MoodArticlesView()
-                            
+                                                        
                             VStack {
                                 HStack {
                                     Spacer()
@@ -220,7 +222,7 @@ struct HelpView: View {
                                         .font(.body)
                                         .foregroundColor(Color("ColorPink16").opacity(0.6))
                                         .fontWeight(.black)
-                                        .padding(.top, 20)
+                                        .padding(.top, 50)
                                     Spacer()
                                 }
                                 FoodView()
@@ -233,29 +235,18 @@ struct HelpView: View {
                                         .font(.body)
                                         .foregroundColor(Color("ColorPink16").opacity(0.6))
                                         .fontWeight(.black)
-                                        .padding(.top, 20)
+                                        .padding(.top, 40)
                                     Spacer()
                                 }
                                 YogaView()
                             }
                             
-//                            VStack {
-//                                HStack {
-//                                    Spacer()
-//                                    Text("fears you might be having")
-//                                        .font(.body)
-//                                        .foregroundColor(Color("ColorPink16").opacity(0.6))
-//                                        .fontWeight(.black)
-//                                        .padding(.bottom, 30)
-//                                    Spacer()
-//                                }
-//
-//                            }
-                            
                             Spacer()
                             
                         }
                         .padding(.top, 60)
+                        .padding(.bottom, 100)
+
                     })
                 }
             }

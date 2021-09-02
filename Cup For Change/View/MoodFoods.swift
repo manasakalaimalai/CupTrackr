@@ -15,7 +15,7 @@ struct FoodView: View {
                         ForEach(sadmoods) { sadmood in
                             MoodFoods(sadmood: sadmood)
                         }
-                        .frame(width: 200, height: 280)
+                        .frame(width: 170, height: 250)
 
                         // Extra space after last article
                         Spacer()
@@ -25,7 +25,7 @@ struct FoodView: View {
                     .padding(.horizontal, 30)
 
                 } //: END OF SCROLLVIEW
-            .frame(width: UIScreen.main.bounds.width, height: 300)
+            .frame(width: UIScreen.main.bounds.width, height: 280)
         }
 }
 
@@ -51,12 +51,11 @@ struct MoodFoods: View {
                     .opacity(0.8)
                     .frame(width: 200, height: 100)
             }
-            .frame(width: 190, height: 240)
+            .frame(width: 160, height: 220)
             .background(LinearGradient(gradient: Gradient(colors: [Color("pastel3"), Color("pastel17")]), startPoint: .leading, endPoint: .trailing))
             .cornerRadius(20)
-        }
-        
-        .frame(width: 200, height: 250)
+        }        
+        .frame(width: 170, height: 230)
         .background(Color("pastel11"))
         .cornerRadius(20)
         .shadow(color: Color("pastel13"), radius: 5, x: 5.0, y: 5.0)

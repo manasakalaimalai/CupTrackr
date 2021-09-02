@@ -17,90 +17,94 @@ struct CupQuiz: View {
     @State var i : Int = 0
     
     var body: some View {
-        VStack {
-            if(self.i < cupquizzes.count) {
-                // Question
-                
-                Spacer()
-                
-                Text(cupquizzes[self.i].question!)
-                    .font(.title3)
-                    .fontWeight(.heavy)
-                    .foregroundColor(Color("ColorPink16").opacity(0.7))
-                    .multilineTextAlignment(.center)
-                    .background(LinearGradient(gradient: Gradient(colors: [Color("pastel8"), Color("pastel17")]), startPoint: .topLeading, endPoint: .bottomTrailing).frame(width: UIScreen.main.bounds.width, height: 450))
-                    .padding(.top, 100)
-                    .padding(.bottom, 230)
-                    .padding(.horizontal, 20)
-                
-                // 1st answer
-                Button(action: {
-                    self.lightflow()
-                }, label: {
-                    Text(cupquizzes[self.i].answers[0])
-                        .fontWeight(.bold)
-                        .foregroundColor(.gray)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Capsule().foregroundColor(Color("ColorPink5")))
-                        .padding(.vertical)
-                        .padding(.horizontal)
-                })
-                
-                // 2nd answer
-                Button(action: {
-                    self.abnormalflow()
+        ZStack {
+            Rectangle()
+            .foregroundColor(Color("pastel"))
 
-                }, label: {
-                    Text(cupquizzes[self.i].answers[1])
-                        .fontWeight(.bold)
-                        .foregroundColor(.gray)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.gray)
-                        .background(Capsule().foregroundColor(Color("ColorPink5")))
-                        .padding(.vertical)
-                        .padding(.horizontal)
-                })
-                
-                // 3rd answer
-                Button(action: {
-                    self.heavyflow()
+            VStack {
+                if(self.i < cupquizzes.count) {
+                    // Question
+                    Text(cupquizzes[self.i].question!)
+                        .font(.title3)
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color("ColorPink16").opacity(0.7))
+                        .multilineTextAlignment(.center)
+                        .padding(.top, 70)
 
-                }, label: {
-                    Text(cupquizzes[self.i].answers[2])
-                        .fontWeight(.bold)
-                        .foregroundColor(.gray)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.gray)
-                        .background(Capsule().foregroundColor(Color("ColorPink5")))
-                        .padding(.vertical)
-                        .padding(.horizontal)
-                })
-                
-                // 4th answer
-                Button(action: {
-                    self.mediumflow()
-                }, label: {
-                    Text(cupquizzes[self.i].answers[3])
-                        .fontWeight(.bold)
-                        .foregroundColor(.gray)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.gray)
-                        .background(Capsule().foregroundColor(Color("ColorPink5")))
-                        .padding(.vertical)
-                        .padding(.horizontal)
-                })
-                
-                Spacer()
+                        .background(LinearGradient(gradient: Gradient(colors: [Color("pastel8"), Color("pastel17")]), startPoint: .topLeading, endPoint: .bottomTrailing).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/2.5))
+                        .padding(.top, 100)
+                        .padding(.bottom, 140)
+                        .padding(.horizontal, 20)
+                    
+                    // 1st answer
+                    Button(action: {
+                        self.lightflow()
+                    }, label: {
+                        Text(cupquizzes[self.i].answers[0])
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Capsule().foregroundColor(Color("ColorPink5")))
+                            .padding(.vertical, 5)
+                            .padding(.horizontal)
+                    })
+                    
+                    // 2nd answer
+                    Button(action: {
+                        self.abnormalflow()
+
+                    }, label: {
+                        Text(cupquizzes[self.i].answers[1])
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.gray)
+                            .background(Capsule().foregroundColor(Color("ColorPink5")))
+                            .padding(.vertical, 5)
+                            .padding(.horizontal)
+                    })
+                    
+                    // 3rd answer
+                    Button(action: {
+                        self.heavyflow()
+
+                    }, label: {
+                        Text(cupquizzes[self.i].answers[2])
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.gray)
+                            .background(Capsule().foregroundColor(Color("ColorPink5")))
+                            .padding(.vertical, 5)
+                            .padding(.horizontal)
+                    })
+                    
+                    // 4th answer
+                    Button(action: {
+                        self.mediumflow()
+                    }, label: {
+                        Text(cupquizzes[self.i].answers[3])
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.gray)
+                            .background(Capsule().foregroundColor(Color("ColorPink5")))
+                            .padding(.vertical, 5)
+                            .padding(.horizontal)
+                    })
+                    
+                    Spacer()
+                }
+                else {
+                    CupQuizFinalView(light: self.light, medium: self.medium, heavy: self.heavy, abnormal: self.abnormal)
+                }
             }
-            else {
-                CupQuizFinalView(light: self.light, medium: self.medium, heavy: self.heavy, abnormal: self.abnormal)
-            }
+            .edgesIgnoringSafeArea(.all)
         }
-        .edgesIgnoringSafeArea(.all)
     }
     
     func lightflow() {

@@ -161,6 +161,6 @@ struct MoodArticleCardView: View {
 
 struct MoodArticlesView_Previews: PreviewProvider {
     static var previews: some View {
-        MoodArticlesView()
+        MoodArticles(moodtracker: moodtrackers[0])
     }
 }

@@ -41,7 +41,7 @@ struct HomeView: View {
                         }
                 }
             } //: VSTACK
-            .background(Color.blue.ignoresSafeArea(.all, edges: .all))       
+            .background(Color.white.ignoresSafeArea(.all, edges: .all))       
         } //: ZSTACK
         .ignoresSafeArea(.all, edges: .top)
     }

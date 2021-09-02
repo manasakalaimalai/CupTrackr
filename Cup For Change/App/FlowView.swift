@@ -42,7 +42,7 @@ var body: some View {
                             label: {
                                 Text("Cup Quiz")
                                 .font(.body)
-                                .fontWeight(.bold)
+                                .fontWeight(.medium)
                                 .foregroundColor(Color("pastel13"))
                                     .background(Color("pastel11").frame(width: 100, height: 30).cornerRadius(30).opacity(0.5))
                             })
@@ -57,7 +57,7 @@ var body: some View {
                         }, label: {
                             Text("how to")
                             .font(.body)
-                            .fontWeight(.black)
+                            .fontWeight(.medium)
                             .foregroundColor(Color("pastel13"))
                             Image(systemName: "info.circle.fill")
                                 .foregroundColor(Color("pastel13"))
@@ -96,6 +96,7 @@ var body: some View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200)
+                            .opacity(0.9)
                             .padding(.bottom, 20)
                             .padding(.top, 40)
 
@@ -165,9 +166,7 @@ var body: some View {
         alert.addAction(login)
         
         UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {
-            
         })
-
     }
 }
 
@@ -175,10 +174,11 @@ struct CardContent: View {
     
     var body: some View {
         Text("How To Use This Tracker")
-            .font(.title3)
+            .font(.subheadline)
             .fontWeight(.black)
             .foregroundColor(Color("ColorPink7"))
         Text("The timer allows you to choose your own custom reminders for when you wish to change your cup. We recommend taking the Cup Quiz to know how often you should change.")
+            .font(.caption)
             .fontWeight(.medium)
             .padding(.horizontal)
             .foregroundColor(Color("ColorPink16"))
@@ -226,18 +226,19 @@ struct BottomCard<Content: View>: View {
                         }
                     }, label: {
                         Text("Dismiss")
+                            .font(.caption)
                             .foregroundColor(.white)
-                            .frame(width: 100, height: 50)
+                            .frame(width: 80, height: 30)
                             .background(Color("pastel13"))
                             .cornerRadius(15)
                     })
                     .padding()
                 }
                 .background(Color.white)
-                .offset(y: cardShown && cardDismissal ? 0 : 500)
+                .offset(y: cardShown && cardDismissal ? 0 : 1000)
                 .frame(height: height)
                 .animation(Animation.default.delay(0.2))
-                .padding(20)
+                .padding(30)
             }
 
         }

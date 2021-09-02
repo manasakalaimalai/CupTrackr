@@ -108,6 +108,7 @@ struct CupQuizFinalView: View {
                     .scaleEffect(scale)
                     .animateForever(autoreverses: true) { scale = 1.0 }
                 Text("For the first cycle using your cup, check your cup after the first 8 hours and do so for several times afterwards to monitor your flow. Once you get the hang of it, you can easily regulate how often you should change your cup. Normally, you will need to change every 8 hours for the first couple days of your period and every 10 towards the last few days.")
+                    .font(.)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color("ColorPink12"))
@@ -118,7 +119,7 @@ struct CupQuizFinalView: View {
             Spacer()
             
         }
-        .frame(width: 350, height: 600)
+        .frame(width: UIScreen.main.bounds.width/1.3, height: UIScreen.main.bounds.height/1.5)
         .background(Color("ColorPink5"))
         .cornerRadius(20)
         .shadow(color: Color("ColorPink7"), radius: 5, x: 7.0, y: 7.0)

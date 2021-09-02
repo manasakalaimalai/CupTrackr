@@ -82,13 +82,10 @@ struct EducationalView: View {
                     }
                 }
                 .edgesIgnoringSafeArea(.all)
+                
             })
             .background(Color(.gray).opacity(0.12).edgesIgnoringSafeArea(.all))
             .navigationBarTitle("Learn")
-            .navigationBarTitleDisplayMode(.automatic)
-            .padding(.top, 0.2)
-            
-            .navigationBarTitle("learn")
             .navigationBarHidden(true)
         }
     }
