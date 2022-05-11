@@ -4,27 +4,59 @@
       "name":"Why You Should Use Sustainable Menstrual Products",
       "image":"womencalendar",
       "color1":"pastel1",
-      "color2":"pastel11"
+      "color2":"pastel11",
+      "content1name": "Plastic Usage",
+      "content2name": "Toxic Chemicals",
+      "content3name": "Negative Impact On Health",
+      "content4name": "Sustainable Alternatives",
+      "content1": "Very commonly used synthetic tampons and pads contain lots of plastic; tampons come with a plastic wrapper, have plastic strings hanging from them and are encased in plastic applicators. Pads have a leak-proof base consisting of plastic, and the packaging is made of plastic as well.  When these wind up in garbage dumps, they do not decompose and prevail for years. Pads and tampons are a major source of landfill waste. In fact, according to National Geographic, the average person who menstruates uses between 5-15 thousand synthetic pads and tampons throughout their lives. In India, around 432 million pads are generated in landfills every year. This shows how much plastic waste can be produced due to unsustainable menstrual management.",
+      "content2": "Common synthetic sanitary pads often contain chemicals like dioxins, petrochemical additives and plasticizing chemicals. They also have artificial colorings and additives. Hence, the sanitary pad waste is very toxic and harmful for the environment when disposed of. They can result in nutrient leaching and loss of fertility of the soil where they are disposed of. It can also result in groundwater pollution. Stray animals like dogs also ingest these disposed sanitary pads as well as tampons, which can be very harmful to their health. When these pads and tampons are disposed of into water bodies, as they commonly are, it can affect marine life and water quality negatively.",
+      "content3": "The toxic chemicals present in synthetic sanitary pads can harm human health. For example, dioxin, which is used to give pads a bright white color, is labelled by the WHO as a pollutant. It is linked to various dangerous health conditions, such as ovarian and cervical cancer. Plasticizers like BPA led to increased risk of vaginal infections. Synthetic tampons can result in a life-threatening health condition called Toxic Shock Syndrome as well.",
+      "content4": "Some alternatives for synthetic tampons and pads are menstrual cups, cloth pads, and biodegradable pads(made out of materials such as corn fibres). Menstrual cups are reusable, do not contain the toxic chemicals which are present in synthetic sanitary pads, and are made up of silicon which is very eco-friendly. Cloth pads are reusable, produce less waste during the manufacturing process, do not have any chemicals, and are made by small businesses often; by buying from them, one can support small businesses. Finally, biodegradable pads are generally are made up of plant based fibres like bamboo, decompose very quickly in landfills, and have antibacterial properties."
    },
    {
       "id":1,
-      "name":"What is Sustainable Menstruation?",
+      "name":"How To Use A Menstrual Cup",
       "image":"lightwoman",
       "color1":"pastel3",
-      "color2":"pastel4"
+      "color2":"pastel4",
+      "content1name": "Initial Cleaning",
+      "content2name": "Insertion",
+      "content3name": "Emptying",
+      "content4name": "Storage",
+      "content1": "It’s important to sterilize your menstrual cup before you insert it for the first time. To do this: Submerge the cup completely in a pot of boiling for 5–10 minutes. Empty the pot and allow the cup to return to room temperature. Wash your hands with warm water and mild, antibacterial soap. Wash the cup with a mild, water-based, oil-free soap and rinse thoroughly. Dry the cup with a clean towel.",
+      "content2": "Always wash your hands before inserting your cup. You may also consider applying a water-based lube to the outside of the cup. This can reduce friction and make insertion easier. Make sure you check the manufacturer’s recommendations on the product packaging before using lube. As a general rule, silicone- and oil-based lube may cause certain cups to degrade. Water and water-based lube may be safer alternatives. When you’re ready to insert, you should: Tightly fold the menstrual cup in half, holding it in one hand with the rim facing up. Insert the cup, rim up, into your vagina like you would a tampon without an applicator. It should sit a few inches below your cervix. Once the cup is in your vagina, rotate it. It will start to expand to create an airtight seal that stops leaks. You may find that you have to twist it or reposition it slightly for your comfort, so adjust as needed.",
+      "content3": "Depending on how heavy your flow is, you may be able to wear your cup for up to 12 hours. You should always remove your cup by the 12-hour mark. This ensures regular cleaning and helps prevent a buildup of bacteria. To remove and empty your cup: Wash your hands with warm water and mild antibacterial soap. Slide your index finger and thumb into your vagina. Pinch the base of the menstrual cup and gently pull to remove it. If you pull on the stem, you could have a mess on your hands. Once it’s out, empty the cup into the sink or toilet. Rinse the cup under tap water, wash it thoroughly, and reinsert. Wash your hands after you’re done. After your period is over, sterilize your cup by putting it in boiling water for 5 to 10 minutes. This will help prevent contamination during storage.",
+      "content4": "You shouldn’t store your cup in an airtight container, because this won’t allow moisture to evaporate. Instead, any moisture present can linger and attract bacteria or fungi. Most manufacturers recommend storing the cup in a cotton pouch or an open bag. If you go to use your cup and find that it appears damaged or thin, has a foul-smelling odor, or is discolored, throw it out. Using the cup in this state may increase your risk of infection."
    },
    {
       "id":2,
       "name":"How Much Menstrual Waste is Actually Generated By Pads?",
       "image":"confusedwoman",
       "color1":"pastel12",
-      "color2":"pastel11"
+      "color2":"pastel11",
+      "content1name": "The Earth is Bleeding",
+      "content2name": "The Facts",
+      "content3name": "The Vast Impact",
+      "content4name": "Green Menstruation",
+      "content1": "Be it a deadly pandemic, devastating cyclones, destructing landslides, volcanoes, earthquakes and what not, the Earth is bleeding. It's time to put the brakes and find ways to live with the nature.",
+      "content2": "If we go by facts then between the average woman's first cycle and menopause you can expect some 450 periods. During those 450 periods the average woman uses between 12000- 15000 pads, tampons and panty liners as per the Rochester institute of technology report. One sanitary pad has plastic equivalent to five plastic bags, so one woman is using menstrual hygiene products equivalent to 60,000 - 75,000 plastic bags. Also one sanitary pad takes up to 500-800 years to decompose. And remember these statistics are excluding the plastic wrapper of the sanitary pads and the tampons and the plastic applicator of tampons.",
+      "content3": "Taking these statistics into consideration and considering that there are 355 million menstruators in India, out of which two thirds are using tampons and pads, women are disposing of almost 12 billion sanitary pads per year. If we bury them they will not degrade and will add on to the plastic burden of the earth in the landfills and oceans and if we burn them they release toxic carcinogenic chemicals like furans and dioxins. In this race of achieving better and better we have unknowingly done significant damage to earth. It's known as green menstruation.",
+      "content4": "Green menstruation is the term used where women use biodegradable menstrual hygiene products, green because they are environment friendly. The products include menstrual cups, organic cotton based pads, reusable cloth pads, and period panties. These options are not only environment friendly but also pocket friendly and really good for women's vaginal and reproductive health. Pocket friendly because instead of 10 sanitary napkins per period they have to buy 1 menstrual cup or 5 reusable cotton or cloth pads for almost 12 periods."
    },
    {
       "id":3,
       "name":"Advantages of Using Menstrual Cups",
-      "image":"cupwoman",
+      "image":"calendarthing",
       "color1":"pastel1",
-      "color2":"pastel4"
+      "color2":"pastel4",
+      "content1name": "Environmentally-Friendly",
+      "content2name": "Cost-Effective",
+      "content3name": "Economical",
+      "content4name": "Health & Safety",
+      "content1": "Traditional menstrual products, like pads and tampons, are a huge burden to the environment. To give you a close estimate, a person who menstruates likely uses around  15,000 sanitary pads or napkins in their lifetime, creating around 200-300 pounds of waste. A menstrual cup, on the other hand, is a highly reusable option, that can be used for years upto a decade! It produces a significantly less amount amount of waste in one's lifetime. Although not all menstrual cups can be called zero-waste products due to their material being made of silicone (not biodegradable), these cups are 100% plastic-free unlike pads and tampons.",
+      "content2": "Since menstrual cups can be replaced once every 9-10 years, this saves a person a whole lot of money as compared to pads and tampons. The average global price of a cup is $20- which is a lot of money in a poor developing country. But over a span of ten years, the cost of one cup represents only 2% of the cost of a 10-year supply of pads/tampons, which estimate to around $720. So ask yourself : Isn't a one-time investment in menstrual cups worth it for your bank account in the long run? ",
+      "content3": "Menstrual cups are designed for long-term use and can be used for 12 hours without worrying about leaking or feeling uncomfortable. This is about twice as long as a pad or tampon lasts. Often, a person requires to change their pad or tampon twice within a 12 hour period. Not only that, in our world today where everyone is busier than ever, people barely have time to buy and dispose their menstrual products. Menstrual cups are the most ideal option in this case as people don't need to worry about changing or feel a constant reminder that they're on their period. More importantly, you don't have to worry about the embarrassing menstrual odor  fanning out at the most inconvenient times because menstrual cups don't allow the exposure of blood to air.",
+      "content4": "A less well known fact about pads and tampons is that their materials may contain toxins, such as dioxin, which can cause issues with reproduction and development. The reason behind this being so unknown is because health organisations like the US FDA recommend but don't require manufacturers to disclose the materials and chemicals in their products. Although the FDA considers the threat to be negligible, no official research has actually proven the threat to be minimal or what the accumulative impact of exposure over a lifetime would be. So wouldn't it just be easier to stick on the safe side of things and use menstrual cups? By contrast, these cups are hypoallergenic and bear a very very low risk of contracting TSS. Due to the medical grade silicone that most menstrual cups are made of, the growth of the bacterium S. aureus (often associated with TSS) isn't supported. This makes the usage of menstrual cups far safer and healthier for yourself."
    }
 ]

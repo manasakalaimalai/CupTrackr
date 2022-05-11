@@ -23,14 +23,14 @@ struct LocationPinView: View {
         }) {
             ZStack {
                 Circle()
-                    .stroke(Color("ColorPink2"), lineWidth: 2)
+                    .stroke(Color("ColorPink6"), lineWidth: 2)
                     .frame(width: 48, height: 48, alignment: .center)
                     .scaleEffect(0.5 + CGFloat(animation))
                     .opacity(1 - animation)
                 Image(systemName: "mappin.circle.fill")
                     .resizable()
                     .scaledToFit()
-                    .foregroundColor(Color("ColorPink2"))
+                    .foregroundColor(Color("ColorPink6"))
                     .cornerRadius(7)
                     .frame(width: 30, height: 30, alignment: .center)
             } //: ZSTACK

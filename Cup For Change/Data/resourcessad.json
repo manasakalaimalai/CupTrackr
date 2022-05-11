@@ -10,7 +10,8 @@
       "color2":"pastel4",
       "colorheader":"pastel11",
       "food": "dairy",
-      "yoga": "Child's Pose"
+      "yoga": "Child's Pose",
+      "tips": "Get 8+ hours of sleep"
    },
    {
        "id": 2,
@@ -23,12 +24,13 @@
        "color2":"pastel11",
        "colorheader":"pastel11",
        "food": "dark & leafy greens",
-       "yoga": "Cat Cow Pose"
+       "yoga": "Cat Cow Pose",
+       "tips": "Always avoid caffeine!"
    },
    {
        "id": 3,
        "mood": "4",
-       "name":"Food Cravings",
+       "name":"Cravings",
        "subtitle": "PMS Symptoms",
        "foodimage":"salmon",
        "yogaimage":"kneebend",
@@ -36,7 +38,8 @@
        "color2":"pastel11",
        "colorheader":"pastel11",
        "food": "salmon",
-       "yoga": "Seated Forward Bend"
+       "yoga": "Seated Forward Bend",
+       "tips": "Try some yoga poses"
    },
    {
        "id": 4,
@@ -49,7 +52,8 @@
        "color2":"pastel4",
        "colorheader":"pastel11",
        "food": "nuts",
-       "yoga": "Knees to Chest Pose"
+       "yoga": "Knees to Chest Pose",
+       "tips": "Use heating pads!"
    },
    {
       "id": 5,
@@ -62,7 +66,8 @@
       "color2":"pastel4",
       "colorheader":"pastel11",
       "food": "papaya",
-      "yoga": "Resting Corpse Pose"
+      "yoga": "Resting Corpse Pose",
+      "tips": "Drink lots of water!"
    },
    {
       "id": 6,
@@ -75,6 +80,7 @@
       "color2":"pastel4",
       "colorheader":"pastel11",
       "food": "water",
-      "yoga": "Forward Fold"
+      "yoga": "Forward Fold",
+      "tips": "Take a warm bath!"
    }
 ]

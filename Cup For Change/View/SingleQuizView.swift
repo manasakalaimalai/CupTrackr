@@ -20,28 +20,55 @@ struct SingleQuizView: View {
         VStack {
             if(self.i < 8) {
 
-                Spacer()
 
-                Text(quiz.question[self.i])
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .padding(.top, 140)
-                    .foregroundColor(.white)
-                    .background(Color("ColorPink14").frame(width: UIScreen.main.bounds.width, height: 450))
-                    .padding(.bottom, 140)
-                    .padding(.horizontal, 20)
+                VStack {
+                    // score card //
+                    HStack {
+                        Spacer()
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundColor(.green)
+                            .font(.subheadline)
+                        Text("Correct: \(self.score)")
+                            .foregroundColor(Color("ColorPink7"))
+                            .fontWeight(.heavy)
+                            .font(.subheadline)
+                        Spacer()
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.red)
+                            .font(.subheadline)
+                        Text("Wrong: \(self.wrong)")
+                            .foregroundColor(Color("ColorPink7"))
+                            .fontWeight(.heavy)
+                            .font(.subheadline)
+                        Spacer()
+                    }
+                    .padding(.bottom, 20)
+                    .padding(.top, 120)
+                    
+                    // question //
+                    Text(quiz.question[self.i])
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding(.top, 40)
+                        .foregroundColor(.white)
+                        .padding(.bottom, 70)
+                        .padding(.horizontal, 20)
+                    
+                }
+                .background(Color("ColorPink14").frame(width: UIScreen.main.bounds.width, height: 400))
 
                 // 1st answer
                 Button(action: {
                     self.buttonAction(n: 0)
                 }, label: {
                     Text(quiz.answers1[self.i])
-                        .padding()
+                        .padding(.vertical, 10)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.gray)
                         .background(Capsule().foregroundColor(Color("ColorPink5")))
                         .padding(.horizontal)
-                        .padding(.vertical, 5)
+                        .padding(.bottom, 5)
+                        .padding(.top, UIScreen.main.bounds.height/13)
                 })
 
                 // 2nd answer
@@ -49,7 +76,7 @@ struct SingleQuizView: View {
                     self.buttonAction(n: 1)
                 }, label: {
                     Text(quiz.answers2[self.i])
-                        .padding()
+                        .padding(.vertical, 10)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.gray)
                         .background(Capsule().foregroundColor(Color("ColorPink5")))
@@ -62,7 +89,7 @@ struct SingleQuizView: View {
                     self.buttonAction(n: 2)
                 }, label: {
                     Text(quiz.answers3[self.i])
-                        .padding()
+                        .padding(.vertical, 10)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.gray)
                         .background(Capsule().foregroundColor(Color("ColorPink5")))
@@ -75,7 +102,7 @@ struct SingleQuizView: View {
                     self.buttonAction(n: 3)
                 }, label: {
                     Text(quiz.answers4[self.i])
-                        .padding()
+                        .padding(.vertical, 10)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.gray)
                         .background(Capsule().foregroundColor(Color("ColorPink5")))
@@ -84,28 +111,6 @@ struct SingleQuizView: View {
                 })
                 
                 Spacer()
-
-                HStack {
-                    Spacer()
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.green)
-                        .font(.title)
-                    Text("Correct: \(self.score)")
-                        .foregroundColor(Color("ColorPink7"))
-                        .fontWeight(.heavy)
-                    Spacer()
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(.red)
-                        .font(.title)
-                    Text("Wrong: \(self.wrong)")
-                        .foregroundColor(Color("ColorPink7"))
-                        .fontWeight(.heavy)
-                    Spacer()
-                }
-                .padding(.bottom, 20)
-                
-                Spacer()
-
             }
             else {
                 FinalView(score: self.score)

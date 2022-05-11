@@ -34,11 +34,11 @@ struct HomeView: View {
                             Image(systemName: "bandage")
                             Text("Resources")
                         }
-                    MapView()
-                        .tabItem {
-                            Image(systemName: "map")
-                            Text("Locations")
-                        }
+//                    MapView()
+//                        .tabItem {
+//                            Image(systemName: "map")
+//                            Text("Locations")
+//                        }
                 }
             } //: VSTACK
             .background(Color.white.ignoresSafeArea(.all, edges: .all))       

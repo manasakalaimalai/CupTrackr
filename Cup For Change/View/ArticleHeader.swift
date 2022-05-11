@@ -26,7 +26,6 @@ struct ArticleHeader: View {
              
             VStack {
                 ZStack {
-                        
                         Text(title)
                             .fontWeight(.bold)
                             .foregroundColor(selectedTab == title ? Color("ColorPink16") : .white)

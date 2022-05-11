@@ -19,7 +19,7 @@ struct ArticleCardView: View {
             Text(article.name)
                 .foregroundColor(Color.white)
                 .font(.callout)
-                .fontWeight(.bold)
+                .fontWeight(.medium)
                 .kerning(1.0)
                 .padding(.top, 20)
                 .padding(.bottom, 30)
@@ -32,16 +32,15 @@ struct ArticleCardView: View {
                 .opacity(0.8)
                 .frame(width: 200, height: 100)
         }
-        .frame(width: 200, height: 250)
+        .frame(width: UIScreen.main.bounds.width/1.9, height: UIScreen.main.bounds.height/3.3)
         .background(LinearGradient(gradient: Gradient(colors: [Color(article.color1), Color(article.color2)]), startPoint: .leading, endPoint: .trailing))
         .cornerRadius(20)
         .shadow(color: Color("ColorPink8"), radius: 5, x: 5.0, y: 5.0)
-        .padding(.vertical)
     }
 }
 
 struct ArticleCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleCardView(article: articles[3])
+        ArticleCardView(article: articles[0])
     }
 }

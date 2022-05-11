@@ -27,6 +27,7 @@ class TimerManager: ObservableObject {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
             if self.secondsLeft == 0 {
                 self.reset()
+                self.Notify()
             }
             self.secondsLeft -= 1
         })
@@ -42,5 +43,17 @@ class TimerManager: ObservableObject {
         self.timerMode = .paused
         timer.invalidate()
     }
-    
+    func Notify() {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Message"
+        content.body = "Time To Change Your Cup!"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        
+        let req = UNNotificationRequest(identifier: "MSG", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
+    }
+
 }

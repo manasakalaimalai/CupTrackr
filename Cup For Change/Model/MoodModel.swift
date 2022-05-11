@@ -21,4 +21,6 @@ struct Mood: Codable, Identifiable {
     var meditation: String
     var reliefmethods: [String]
     var reliefsubtitle: String
+    var link: URL
+    var description: String
 }

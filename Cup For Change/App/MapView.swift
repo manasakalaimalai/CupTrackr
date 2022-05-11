@@ -39,7 +39,7 @@ struct MapView: View {
         }) //: MAP
         .ignoresSafeArea()
     }
-    .background(Color("ColorPink2").ignoresSafeArea())
+    .background(Color("pastel2").ignoresSafeArea())
     
   }
 }

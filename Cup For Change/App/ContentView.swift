@@ -41,12 +41,12 @@ struct WalkthroughScreen: View {
         ZStack {
             //: 1ST VIEW
             if currentPage == 1 {
-                ScreenView(image: "image1", title: "LEARN", description: "Learn about all things related to sustainable menstruation, educate yourself on proper menstrual hygiene habits, AND take quizzes to test your knowledge!")
+                ScreenView(image: "image1", title: "LEARN", description: "Learn about all things related to sustainable menstruation and take quizzes to test your knowledge!")
                     .transition(.scale)
             }
             //: 2ND VIEW
             if currentPage == 2 {
-                ScreenView(image: "image2", title: "TRACK", description: "Use our flow tracker to determine when and how often to change your menstrual cup or reusable pad! You'll get push notifications as reminders. ")
+                ScreenView(image: "image2", title: "TRACK", description: "Use our flow tracker to determine when and how often to change your menstrual cup. Push notifications will be sent when the timer ends. ")
                     .transition(.scale)
             }
             //: 3RD VIEW
@@ -56,7 +56,7 @@ struct WalkthroughScreen: View {
             }
             //: 4TH VIEW
             if currentPage == 4 {
-                ScreenView(image: "image4", title: "GET HELP", description: "Featuring a software that analyzes any menstrual-cup related problems or general period issues and redirects you to relevant resources.")
+                ScreenView(image: "image4", title: "GET GUIDANCE", description: "Featuring a software that analyzes menstrual cup-related or general period problems and provides you with relevant guidance.")
                     .transition(.scale)
             }
         } //: ZSTACK
@@ -90,7 +90,10 @@ struct WalkthroughScreen: View {
                                 .rotationEffect(.init(degrees: 270))
                         }
                         .padding(-10)
+                        .shadow(color: .white, radius: 7, x: -5, y: 10)
                     )
+                    .shadow(color: .gray.opacity(0.5), radius: 7, x: -5, y: 10)
+
             })
             .padding(.bottom, 40)
             
@@ -116,9 +119,11 @@ struct ScreenView: View {
                 if currentPage == 1 {
                     Text("welcome..")
                         .font(.title)
-                        .fontWeight(.semibold)
-                        .kerning(2.5)
-                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .kerning(1)
+                        .foregroundColor(Color("ColorPink13").opacity(0.8))
+                        .transition(.slide)
+                        .shadow(color: .white, radius: 6, x: -5, y: 5)
                 } else {
                     // Go back to previous page
                     Button(action: {
@@ -131,12 +136,15 @@ struct ScreenView: View {
                                 .foregroundColor(.white)
                                 .padding(.vertical, 10)
                                 .padding(.horizontal)
-                                .background(Color.black.opacity(0.04))
-                                .cornerRadius(10)
-                            Text("Go Back")
-                                .font(.subheadline)
-                                .foregroundColor(.white)
+                                .background(Color("pastel13").frame(width: UIScreen.main.bounds.width/8, height: UIScreen.main.bounds.width/9, alignment: .center).cornerRadius(20).opacity(0.15))
+                                .shadow(color: .white, radius: 2, x: 0, y: 5)
+
+                            Text("Back")
+                                .font(.body)
+                                .fontWeight(.bold)
                                 .kerning(1.2)
+                                .foregroundColor(Color("pastel13"))
+                                .shadow(color: .white, radius: 5, x: -5, y: 5)
                         }
                     })
                 }
@@ -148,13 +156,17 @@ struct ScreenView: View {
                         isRepeatingOnboarding = true
                     }
                 }, label: {
-                    Text("Skip to Home")
+                    Text("Skip")
                         .font(.subheadline)
-                        .foregroundColor(.white)
-                        .kerning(1.2)
+                        .fontWeight(.bold)
+                        .kerning(1)
+                        .foregroundColor(.black).opacity(0.25)
+                        .background(Color("pastel13").frame(width: UIScreen.main.bounds.width/5, height: UIScreen.main.bounds.width/9, alignment: .center).cornerRadius(60).opacity(0.15))
+                        .shadow(color: .white, radius: 1, x: -2, y: 5)
+
                 }) //: END OF BUTTON
             } //: HSTACK
-            .frame(width: 350, height: 50)
+            .frame(width: UIScreen.main.bounds.width/1.2, height: 50)
             .padding(.top, 20)
             
             Spacer(minLength: 0)
@@ -162,27 +174,29 @@ struct ScreenView: View {
             Image(image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 450, height: 200, alignment: .center)
-                .padding(.vertical, 40)
-            
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/3, alignment: .center)
+                .padding(.vertical, UIScreen.main.bounds.height/80)
+                .shadow(color: Color("pastel13"), radius: 15, x: -5, y: 10)
             Text(title)
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .foregroundColor(.white)
-                .background(Color.white.frame(width: 300, height: 2, alignment: .center).offset(y:25))
+                .background(Color(.white).frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/260, alignment: .center).offset(y: 25).shadow(color: .black.opacity(0.2), radius: 10, x: -5, y: 10))
+                .shadow(color: .black.opacity(0.2), radius: 10, x: -5, y: 10)
             Text(description)
                 .font(.subheadline)
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 10)
-                .foregroundColor(Color("ColorPink6"))
+                .padding(.horizontal, 15)
+                .foregroundColor(Color("ColorPink13").opacity(0.7))
                 .lineSpacing(5)
                 .frame(width: 350, height: 100)
+                .padding(.bottom, 20)
             
             Spacer(minLength: 100)
             
         }
-        .background(LinearGradient(gradient: Gradient(colors: [Color("ColorPink2"), Color("ColorPink4")]), startPoint: .top, endPoint: .bottom).cornerRadius(10).ignoresSafeArea())
+        .background(LinearGradient(gradient: Gradient(colors: [Color("pastel11"), Color("pastel1")]), startPoint: .top, endPoint: .bottom).cornerRadius(10).ignoresSafeArea())
     }
 }
 

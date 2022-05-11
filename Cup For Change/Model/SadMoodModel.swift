@@ -21,4 +21,5 @@ struct Sad: Codable, Identifiable {
     var colorheader: String
     var food: String
     var yoga: String
+    var tips: String
 }

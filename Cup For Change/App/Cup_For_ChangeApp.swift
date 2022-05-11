@@ -19,7 +19,10 @@ struct CupForChangeApp: App {
             ContentView()
         }
     }
+
 }
+
+
 
 // initializing Firebase
 
@@ -30,3 +33,4 @@ class AppDelegate : NSObject, UIApplicationDelegate {
         return true
     }
 }
+

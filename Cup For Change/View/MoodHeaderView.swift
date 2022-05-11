@@ -28,7 +28,7 @@ struct MoodHeaderView: View {
                             .resizable()
                             .scaledToFit()
                             .font(.system(size: 30))
-                            .foregroundColor(selectedMood == mood_title ? Color("pastel2") : Color("pastel3"))
+                            .foregroundColor(selectedMood == mood_title ? Color("pastel4") : Color("pastel4"))
                             .padding(.vertical, 20)
                             .padding(.horizontal, 5)
                     }

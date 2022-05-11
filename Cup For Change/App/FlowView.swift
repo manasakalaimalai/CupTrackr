@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 
 struct FlowView: View {
@@ -16,137 +17,151 @@ struct FlowView: View {
     @State var cardShown = false
     @State var cardDismissal = false
     @State var password = ""
-    let availableHours = Array(2...12)
+    let availableHours = Array(1...12)
 
 var body: some View {
 // MARK: BODY
-    
     NavigationView() {
         ZStack {
-                VStack {
-                    HStack {
+            VStack {
+                HStack {
                         Spacer()
-    //                    Button(action: {
-    //                        withAnimation {
-    //                            alertView()
-    //                        }
-    //                    }, label: {
-    //                        Text("login")
-    //                        .font(.body)
-    //                        .fontWeight(.bold)
-    //                        .foregroundColor(Color("pastel13"))
-    //                    })
-
                         NavigationLink(
                             destination: CupQuiz(),
                             label: {
                                 Text("Cup Quiz")
                                 .font(.body)
-                                .fontWeight(.medium)
-                                .foregroundColor(Color("pastel13"))
-                                    .background(Color("pastel11").frame(width: 100, height: 30).cornerRadius(30).opacity(0.5))
+                                .fontWeight(.heavy)
+                                .foregroundColor(.white)
+                                .background(Color("pastel2").frame(width: UIScreen.main.bounds.width/3.8, height: UIScreen.main.bounds.height/20).cornerRadius(30).opacity(0.5))
+                                .shadow(color: .black.opacity(0.26), radius: 8, x: -5, y: 5)
                             })
 
                         Spacer(minLength: UIScreen.main.bounds.width/3)
-                        
+
                         Button(action: {
                             withAnimation {
                                 cardShown.toggle()
                                 cardDismissal.toggle()
                             }
                         }, label: {
-                            Text("how to")
+                            
+                            Text("How To")
                             .font(.body)
-                            .fontWeight(.medium)
-                            .foregroundColor(Color("pastel13"))
-                            Image(systemName: "info.circle.fill")
-                                .foregroundColor(Color("pastel13"))
-                        })
-                        Spacer()
-                    }
-                    .padding(.top, 20)
-                    .padding(.horizontal, 20)
-
-
-                    Text("welcome \(password)...")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                        .foregroundColor(Color("ColorPink7").opacity(0.6))
-                    .padding(.top, 20)
-                    .padding(.bottom, 10)
-                    
-                    HStack {
-                        Spacer()
-                        Text("your cup tracker")
                             .fontWeight(.heavy)
-                            .foregroundColor(Color("ColorPink7"))
-                            .font(.title)
+                            .foregroundColor(.white)
+                            Image(systemName: "info.circle.fill")
+                                .foregroundColor(.white)
+                        })
+                        .background(Color("pastel2").frame(width: UIScreen.main.bounds.width/3.2, height: UIScreen.main.bounds.height/20).cornerRadius(30).opacity(0.5))
+                        .shadow(color: .black.opacity(0.26), radius: 8, x: -5, y: 5)
+
                         Spacer()
                     }
-                    .padding(.top, 10)
-                    .padding(.horizontal, 20)
-                        
-                    Text(secondstoHoursandMinsandSecs(seconds: timerManager.secondsLeft))
-                            .font(.system(size: 40))
-                            .fontWeight(.medium)
-                            .padding(.top, 50)
-                            .foregroundColor(.black).opacity(0.6)
-                        
-                        Image("MenstrualCup")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200)
-                            .opacity(0.9)
-                            .padding(.bottom, 20)
-                            .padding(.top, 40)
+                .padding(.horizontal, 20)
+                .padding(.bottom, 20)
 
-                        Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50)
-                            .foregroundColor(Color("ColorPink7"))
-                            .onTapGesture(perform: {
-                                if self.timerManager.timerMode == .initial {
-                                    self.timerManager.setTimerLength(hours: self.availableHours[self.selectedPickerIndex]*3600)
-                                }
-                                self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
-                            })
+                HStack {
+                    Spacer()
+                    Text("cup tracker")
+                        .fontWeight(.heavy)
+                        .font(.largeTitle)
+                        .foregroundColor(Color("ColorPink16").opacity(0.7))
+                        .shadow(color: .white, radius: 10, x: -5, y: 5)
+                    Spacer()
+                }
+                .padding(.top, 20)
+                .padding(.horizontal, 20)
+                        
+                VStack {
+                    Text(secondstoHoursandMinsandSecs(seconds: timerManager.secondsLeft))
+                            .font(.system(size: UIScreen.main.bounds.width/12))
+                            .fontWeight(.medium)
+                            .foregroundColor(Color("ColorPink16").opacity(0.4))
+                            .background(LinearGradient(colors: [Color("pastel13"), Color("pastel4")], startPoint: .top, endPoint: .bottom).frame(width: UIScreen.main.bounds.width/1.6, height: UIScreen.main.bounds.height/13).cornerRadius(50).opacity(0.3).shadow(color: .black.opacity(0.5), radius: 5, x: 5, y: 5))
+                            .padding(.top, 20)
+
+                    Image("MenstrualCup")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: UIScreen.main.bounds.width/3.6)
+                        .opacity(0.9)
+                        .padding(.bottom, 30)
+                        .padding(.top, 30)
+
+                    Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                        .foregroundColor(Color("pastel3"))
+                        .onTapGesture(perform: {
+                            if self.timerManager.timerMode == .initial {
+                                self.timerManager.setTimerLength(hours: self.availableHours[self.selectedPickerIndex]*3600)
+                            }
+                            self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
+                        })
+                    Text("select hours below")
+                        .font(.footnote)
+                        .kerning(1)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("pastel13"))
+                        .padding(.top, 10)
+                        .padding(.bottom, 20)
+                    
                         if timerManager.timerMode == .paused {
                             Image(systemName: "gobackward")
                                 .scaledToFit()
-                                .frame(width: 30, height: 30)
-                                .padding(.top, 40)
+                                .frame(width: 50, height: 50)
+                                .font(.title3)
+                                .padding(.top, 20)
                                 .onTapGesture(perform: {
                                     self.timerManager.reset()
                                 })
                         }
                         if timerManager.timerMode == .initial {
                             Picker(selection: $selectedPickerIndex, label: Text("")) {
-                                ForEach(0 ..< availableHours.count) {
-                                    Text("\(self.availableHours[$0]) hours")
-                                        .foregroundColor(.black).opacity(0.7)
+                                ForEach(1 ..< availableHours.count) {
+                                    Text("\(self.availableHours[$0]) Hours")
                                 }
                             }
+                            .background(LinearGradient(colors: [ Color("pastel1"), Color("pastel2")], startPoint: .top, endPoint: .bottom).frame(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/20).cornerRadius(50).opacity(0.3).shadow(color: .black.opacity(0.5), radius: 5, x: 5, y: 5))
                             .labelsHidden()
                         }
-                    Spacer()
                 }
-                BottomCard(cardShown: $cardShown, cardDismissal: $cardDismissal, height: UIScreen.main.bounds.height/2.2) {
-                    CardContent()
-                        .padding()
-                }
-                .animation(.default)
-                
+                    
+                Spacer()
+            } // END OF VSTACK
+            BottomCard(cardShown: $cardShown, cardDismissal: $cardDismissal, height: UIScreen.main.bounds.height/2.2) {
+                CardContent()
+                .padding()
             }
-        .navigationBarTitle("Tracker")
-        .navigationBarHidden(true)
-            
-        .background(
-            LinearGradient(gradient: Gradient(colors: [Color("ColorPink15"), Color("pastel17")]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all)
-    )
-    }
+            .animation(.default)
+            .edgesIgnoringSafeArea(.all)
+            .onAppear(perform: {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { (_,_) in }})
+        } // END OF ZSTACK
+        
+    } // END OF NAVIGATIONVIEW
+    .navigationBarTitle("Tracker")
+    .navigationBarHidden(true)
+    .background(
+        LinearGradient(gradient: Gradient(colors: [Color("ColorPink15"), Color("pastel17")]), startPoint: .top, endPoint: .bottom)
+            .edgesIgnoringSafeArea(.all))
+
 }
+    func Notify() {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Message"
+        content.body = "Time To Change Your Cup!"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        
+        let req = UNNotificationRequest(identifier: "MSG", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
+    }
+    
     func alertView(){
         let alert = UIAlertController(title: "Login", message: "Enter Your First Name", preferredStyle: .alert)
         
@@ -173,12 +188,16 @@ var body: some View {
 struct CardContent: View {
     
     var body: some View {
-        Text("How To Use This Tracker")
-            .font(.subheadline)
-            .fontWeight(.black)
-            .foregroundColor(Color("ColorPink7"))
+        HStack {
+            Text("How To Use This Tracker")
+                .font(.subheadline)
+                .fontWeight(.black)
+            .foregroundColor(Color("ColorPink16").opacity(0.7))
+            Image(systemName: "info.circle.fill")
+                .foregroundColor(Color("ColorPink16").opacity(0.7))
+        }
         Text("The timer allows you to choose your own custom reminders for when you wish to change your cup. We recommend taking the Cup Quiz to know how often you should change.")
-            .font(.caption)
+            .font(.footnote)
             .fontWeight(.medium)
             .padding(.horizontal)
             .foregroundColor(Color("ColorPink16"))
@@ -228,8 +247,9 @@ struct BottomCard<Content: View>: View {
                         Text("Dismiss")
                             .font(.caption)
                             .foregroundColor(.white)
+                            .fontWeight(.heavy)
                             .frame(width: 80, height: 30)
-                            .background(Color("pastel13"))
+                            .background(Color("pastel3"))
                             .cornerRadius(15)
                     })
                     .padding()

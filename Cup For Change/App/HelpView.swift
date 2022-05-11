@@ -70,7 +70,7 @@ struct HelpView: View {
                                 .font(.title)
                                 .fontWeight(.black)
                                 .foregroundColor(Color("pastel13"))
-                                .padding(.top, 20)
+                                .padding(.top, UIScreen.main.bounds.height/11)
 
                             HStack(spacing: 0) {
                                 ForEach(mood_top, id: \.self) { mood in
@@ -79,50 +79,53 @@ struct HelpView: View {
                                 }
                             }
                             .transition(.move(edge: .bottom))
-                            .animation(.linear(duration: 0.4))                        .padding(.horizontal, 40)
-                            .padding(.bottom, 40)
+                            .animation(.linear(duration: 0.4))                     .padding(.horizontal, 40)
                             .frame(width: UIScreen.main.bounds.width/1.3)
                             .padding(.horizontal, 20)
-                            
-                            HStack {
-                                Spacer()
-                                Text("ways to continue feeling good")
-                                    .foregroundColor(Color("ColorPink16").opacity(0.4))
-                                    .fontWeight(.black)
-                                    .padding(.bottom, 30)
-                                Spacer()
-                            }
+                            .padding(.bottom, 40)
                             
                             VStack {
                                 HStack {
                                     Text("affirmations")
                                         .font(.title2)
-                                        .foregroundColor(Color("ColorPink16"))
+                                        .foregroundColor(Color("ColorPink13").opacity(0.5))
                                         .fontWeight(.black)
                                         .padding(.bottom, 10)
                                 }
                                 LearnerTabView()
-                                    .frame(height: 250)
+                                    .frame(height: UIScreen.main.bounds.height/4.01)
                             }
                             .padding(.bottom, 29)
                             
-                            HStack {
-                                Text("meditate")
-                                    .font(.title2)
-                                    .foregroundColor(Color("ColorPink16"))
-                                    .fontWeight(.black)                                    .padding(.bottom, 30)
+                            VStack {
+                                HStack {
+                                    Text("meditate")
+                                        .font(.title2)
+                                        .foregroundColor(Color("ColorPink13").opacity(0.5))
+                                        .fontWeight(.black)                     .padding(.bottom, 30)
+                                }
+                                MeditationView()
                             }
+                            .padding(.bottom, 29)
                             
-                            NavigationLink(
-                                destination: ArticleScrollView(),
-                                label: {
-                                    MeditationView()
-                                })
+                            VStack {
+                                HStack {
+                                    Text("video affirmations")
+                                        .font(.title3)
+                                        .foregroundColor(Color("ColorPink13").opacity(0.5))
+                                        .fontWeight(.black)
+                                        .padding(.bottom, 25)
+                                }
+                                Affirmation1View()
+                                .padding(.bottom, 15)
+                                Affirmation2View()
+                            }
+                            .padding(.bottom, 29)
                             
                             Spacer()
                         }
                         .padding(.top, 60)
-
+                        .padding(.bottom, UIScreen.main.bounds.height/6)
                     })
                 }
                 if selectedMood == mood_type[2] {
@@ -141,7 +144,7 @@ struct HelpView: View {
                                 .font(.title)
                                 .fontWeight(.heavy)
                                 .foregroundColor(Color("pastel13"))
-                                .padding(.top, 20)
+                                .padding(.top, UIScreen.main.bounds.height/11)
 
                             HStack(spacing: 0) {
                                 ForEach(mood_top, id: \.self) { mood in
@@ -156,19 +159,35 @@ struct HelpView: View {
                             .frame(width: UIScreen.main.bounds.width/1.3)
                             .padding(.horizontal, 20)
                             
-                            HStack {
-                                Spacer()
-                                Text("symptoms you might be having")
-                                    .foregroundColor(Color("ColorPink16").opacity(0.6))
-                                    .fontWeight(.black)
-                                    .padding(.bottom, 30)
-                                Spacer()
+                            VStack {
+                                HStack {
+                                    Spacer()
+                                    Text("tips for a pain-free period")
+                                        .foregroundColor(Color("ColorPink16").opacity(0.6))
+                                        .fontWeight(.bold)
+                                        .padding(.bottom, 30)
+                                    Spacer()
+                                }
+                                TipsView()
                             }
                             
-                            MoodArticlesView()
+                            VStack {
+                                HStack {
+                                    Spacer()
+                                    Text("symptoms you might be having")
+                                        .foregroundColor(Color("ColorPink16").opacity(0.6))
+                                        .fontWeight(.bold)
+                                        .padding(.bottom, 10)
+                                        .padding(.top, 50)
+                                    Spacer()
+                                }
+                                MoodArticlesView()
+                            }
+
                             Spacer()
                         }
                         .padding(.top, 60)
+                        .padding(.bottom, UIScreen.main.bounds.height/6)
                     })
                 }
                 if selectedMood == mood_type[3] {
@@ -187,8 +206,8 @@ struct HelpView: View {
                                 .font(.title)
                                 .fontWeight(.heavy)
                                 .foregroundColor(Color("pastel13"))
-                                .padding(.top, 20)
-                            
+                                .padding(.top, UIScreen.main.bounds.height/11)
+
                             HStack(spacing: 0) {
                                 ForEach(mood_top, id: \.self) { mood in
                                     
@@ -208,8 +227,8 @@ struct HelpView: View {
                                     Text("symptoms you might be having")
                                         .font(.body)
                                         .foregroundColor(Color("ColorPink16").opacity(0.6))
-                                        .fontWeight(.black)
-                                        .padding(.bottom, 30)
+                                        .fontWeight(.bold)
+                                        .padding(.bottom, 10)
                                     Spacer()
                                 }
                                 MoodArticlesView()
@@ -222,7 +241,7 @@ struct HelpView: View {
                                         .font(.body)
                                         .foregroundColor(Color("ColorPink16").opacity(0.6))
                                         .fontWeight(.black)
-                                        .padding(.top, 50)
+                                        .padding(.top, 30)
                                     Spacer()
                                 }
                                 FoodView()
@@ -235,7 +254,7 @@ struct HelpView: View {
                                         .font(.body)
                                         .foregroundColor(Color("ColorPink16").opacity(0.6))
                                         .fontWeight(.black)
-                                        .padding(.top, 40)
+                                        .padding(.top, 20)
                                     Spacer()
                                 }
                                 YogaView()
@@ -245,7 +264,7 @@ struct HelpView: View {
                             
                         }
                         .padding(.top, 60)
-                        .padding(.bottom, 100)
+                        .padding(.bottom, UIScreen.main.bounds.height/6)
 
                     })
                 }

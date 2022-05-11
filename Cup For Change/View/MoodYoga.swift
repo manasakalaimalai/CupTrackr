@@ -15,7 +15,7 @@ struct YogaView: View {
                         ForEach(sadmoods) { sadmood in
                             MoodYoga(sadmood: sadmood)
                         }
-                        .frame(width: 170, height: 250)
+                        .frame(width: 170, height: 240)
 
                         // Extra space after last article
                         Spacer()
@@ -25,7 +25,7 @@ struct YogaView: View {
                     .padding(.horizontal, 30)
 
                 } //: END OF SCROLLVIEW
-            .frame(width: UIScreen.main.bounds.width, height: 280)
+            .frame(width: UIScreen.main.bounds.width, height: 240)
         }
 }
 
@@ -37,7 +37,7 @@ struct MoodYoga: View {
             VStack {
                 Text(sadmood.yoga)
                     .foregroundColor(Color.white)
-                    .font(.title3)
+                    .font(.subheadline)
                     .fontWeight(.heavy)
                     .kerning(1.0)
                     .padding(.top, 20)
@@ -49,13 +49,13 @@ struct MoodYoga: View {
                     .padding(.horizontal, 30)
                     .padding(.bottom, 10)
                     .opacity(0.8)
-                    .frame(width: 200, height: 100)
+                    .frame(width: 170, height: 100)
             }
-            .frame(width: 160, height: 220)
+            .frame(width: 160, height: 200)
             .background(LinearGradient(gradient: Gradient(colors: [Color("pastel17"), Color("pastel11")]), startPoint: .leading, endPoint: .trailing))
             .cornerRadius(20)
         }
-        .frame(width: 170, height: 230)
+        .frame(width: 170, height: 210)
         .background(Color("pastel3"))
         .cornerRadius(20)
         .shadow(color: Color("pastel13"), radius: 5, x: 5.0, y: 5.0)

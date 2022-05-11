@@ -17,12 +17,21 @@ struct FinalView: View {
             HStack {
                 Spacer()
                 VStack {
+                    if score >= 5 {
                     Text("Great Job!")
                         .foregroundColor(.white)
                         .font(.title)
                         .fontWeight(.bold)
                         .kerning(1.0)
                         .padding(30)
+                    } else {
+                    Text("That's ok, try again!")
+                        .foregroundColor(.white)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .kerning(1.0)
+                        .padding(30)
+                    }
                     Image("trophy")
                         .resizable()
                         .scaledToFit()

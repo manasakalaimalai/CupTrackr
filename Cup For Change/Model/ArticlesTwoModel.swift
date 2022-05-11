@@ -15,4 +15,12 @@ struct ArticleTwo: Codable, Identifiable {
     var image: String
     var color1: String
     var color2: String
+    var content1name: String
+    var content2name: String
+    var content3name: String
+    var content4name: String
+    var content1: String
+    var content2: String
+    var content3: String
+    var content4: String
 }

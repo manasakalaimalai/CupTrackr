@@ -11,19 +11,44 @@ struct EducationalView: View {
 // MARK: PROPERTIES
 
     @State var index = 0
-    
     @State var selectedTab = header_title[0]
-    
     @Namespace var animation
-    
-//    let newColor = UIColor(red: 194, green: 216, blue: 211)
 
 // MARK: HOME
     var body: some View {
-         
         NavigationView() {
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack {
+                    ZStack {
+                        Image("blob3")
+                        .resizable()
+                        .scaledToFit()
+                        .opacity(0.8)
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width, alignment: .center)
+                        .edgesIgnoringSafeArea(.all)
+                        
+                        if selectedTab == header_title[0] {
+                        Text("Learn about all things related to menstruation and quiz yourself")
+                            .foregroundColor(.white)
+                            .fontWeight(.heavy)
+                            .font(.caption)
+                            .padding(.horizontal, 60)
+                            .padding(.bottom, UIScreen.main.bounds.height/4.3)
+                            .multilineTextAlignment(.leading)
+                        }
+                        if selectedTab == header_title[1] {
+                        Text("Quiz Yourself!")
+                            .foregroundColor(.white)
+                            .fontWeight(.heavy)
+                            .font(.body)
+                            .padding(.horizontal, 60)
+                            .padding(.bottom, UIScreen.main.bounds.height/4.3)
+                            .multilineTextAlignment(.leading)
+                        }
+                    }
+                    .padding(.bottom, -UIScreen.main.bounds.height/4.4)
+                    Spacer(minLength: 0)
+                    
                     // ARTICLES & QUIZZES TITLE //
                     
                     HStack(spacing: 0) {
@@ -37,7 +62,6 @@ struct EducationalView: View {
                         }
                     }
                     .padding(.horizontal, 60)
-                    .padding(.top, 50)
                     
                     // ARTICLES
                     
@@ -78,16 +102,21 @@ struct EducationalView: View {
                     
                     if selectedTab == header_title[1] {
                         GridView(quizzes: quizzes)
-                        
+                        .padding(.top)
                     }
-                }
+                } // END OF VSTACK
                 .edgesIgnoringSafeArea(.all)
+                .padding(.bottom, UIScreen.main.bounds.height/10)
                 
-            })
+            }) // END OF SCROLLVIEW
+            .edgesIgnoringSafeArea(.all)
             .background(Color(.gray).opacity(0.12).edgesIgnoringSafeArea(.all))
             .navigationBarTitle("Learn")
             .navigationBarHidden(true)
-        }
+
+        } // END OF NAVIGATIONVIEW
+        .edgesIgnoringSafeArea(.all)
+
     }
 }
 
@@ -101,9 +130,7 @@ struct GridView: View {
         LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 1), spacing: 0, content: {
             
             ForEach(quizzes) {quiz in
-
                 ZStack {
-                    
                     VStack(spacing : 10) {
                         NavigationLink(destination: SingleQuizView(quiz: quiz)) {
                             SingleCardView(quiz: quiz)
@@ -139,4 +166,4 @@ struct EducationalView_Previews: PreviewProvider {
 //    }
 //}
 
-var header_title = ["Article", "Quizzes"]
+var header_title = ["Articles", "Quizzes"]
