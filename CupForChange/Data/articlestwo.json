@@ -1,0 +1,62 @@
+[
+   {
+      "id":0,
+      "name":"How to Wash Your Menstrual Cup",
+      "image":"confusedwoman",
+      "color1":"pastel3",
+      "color2":"pastel4",
+      "content1name": "Step One: Inital Use",
+      "content2name": "Step Two: During Use",
+      "content3name": "Step Three: End of Use",
+      "content4name": "Step Four: After Use",
+      "content1": "Before your first use, boil a pot of water, and let the cup sit in the boiling water for no more than 10 minutes. Be careful to monitor the cup so it doesn’t stick to the bottom of the pot and burn.Once you’ve successfully prepared your menstrual cup, you’ll also want to keep it clean every day after using it. Cleaning the cup removes bacteria and buildup, and prevents stains and odor. No matter where you are, you’ll want to always wash your hands before and after insertion of the cup. ",
+      "content2": "Once your cup has been filled, remove the cup and empty the blood into the toilet. Then, rinse it out with clean water, and use a mild, oil-free, fragrance-free soap to give it a quick clean. Once it’s clean, you can reinsert the cup.",
+      "content3": "To sanitize the cup after your period is over, rinse it thoroughly, then boil it for a few minutes. After the cup is boiled, set it aside to completely cool down and dry off. Some brands sell sanitizing cups that can be filled with water, placed in the microwave with the menstrual cup inside, and boiled for 3 to 4 minutes. Both processes remove all the bacteria to prevent bacterial growth before the next use.",
+      "content4": "Most cups will come with a bag or pouch to store it in when you’re not using the cup. If yours didn’t come with one, you can use any breathable pouch. You want to make sure you protect the cup from dirt and germs, but that there’s still plenty of air circulation. Store the pouch in a cold, dry location (such as a vanity drawer) where the cup can properly dry out before your next use."
+   },
+   {
+      "id":1,
+      "name":"What To Do If Your Cup..",
+      "image":"cupwomanheart",
+      "color1":"pastel1",
+      "color2":"pastel11",
+      "content1name": "..Has a foul odor",
+      "content2name": "..Has discoloration or stains",
+      "content3name": "..Has white residue on it",
+      "content4name": "..Fell into the toilet",
+      "content1": "Some vaginal smells are completely natural. But if you notice your cup is starting to pick up a sour smell, there are a few things you can do. First, take note of how long you’re wearing your cup. If you wear it for too long, this can increase the chance of an odor developing. It’s best to change it every 4 to 8 hours, if possible. Never wear it for more than 12 hours. When you clean the cup after every use, rinse it with a shot of cold water first. Hot water can lock in smells. Then, take an unused toothbrush to scrub the cup thoroughly. Finally, make sure you’re sanitizing your cup after each period. This will help prevent odors from setting in for the long haul.",
+      "content2": "Slight discoloration will likely happen over time. Some discoloration is preventable with a thorough sanitization before and after every period, and continual thorough cleaning. Similarly to how you can prevent odors, you can also use a clean toothbrush to scrub away stains when you’re doing your daily cleaning. If you notice extreme discoloration, it’s time for a new cup. Simply recycle or dispose of your old cup and replace it with a new one.",
+      "content3": "If you notice a white film after boiling your cup, don’t fret. This is completely normal. The white residue comes from hard water in certain regions. Simply rinse off the residue before inserting the cup.",
+      "content4": "Whatever you do, don’t reinsert it right away. If it fell into clean toilet water at your home bathroom, chances are that you’ll be fine after sterilizing the cup in some boiling water. But if you dropped the cup in a public restroom, or if there’s pee or feces in the toilet, you might want to replace the cup entirely. An at-home sterilization might not be enough to remove the bacteria from these situations."
+   },
+   {
+      "id":2,
+      "name":"How to Wash Your Reusable Pad",
+      "image":"uterus",
+      "color1":"pastel1",
+      "color2":"pastel4",
+      "content1name": "Prepping",
+      "content2name": "Washing",
+      "content3name": "Drying",
+      "content4name": "After Use Care",
+      "content1": "Like any reusable product, it’s always clever to give them a wash before first use – just like you would if you were to buy a new pair of knickers. The wings wrap around the gusset of your underwear, and the buttons pop together to form a secure seal. Once your pad is in place, you’re good to go! You can wear the pads for the amount of time as you would a normal disposable pad, so depending on your flow you’ll know how often you need to change. If you’re out and need to change your pad, simply fold the pad inwards and reseal with the buttons then pop into your wet-bag to keep them safe.",
+      "content2": "After they’ve been in a rinse, stretch each side of the pad to the opposite direction so it can revert back to its original shape. Air drying is recommended – this is a tumble free zone! A top tip is to wrap your pads round a bathroom radiator if you have one, as this is a great way to keep your pads in shape and help them dry quickly.",
+      "content3": "Soaking in cold water first is essential for removing blood from all materials, not just cloth pads. It’s important to avoid hot water during the first rinse, because it sets blood stains. Leave for minimum 30 minutes. Facing the used side downward facilitates the soaking routine. This is a great tip gained from user experience: The blood “falls” out of the fabric to the bottom of the water bucket, as opposed to setting deeper into the pad if soaked facing upward. Try it out and notice the difference! Rinsing until the (cold) water runs clear after the soaking process, will clean most of the blood out of the fabric. Washing with soap further helps remove residues, especially to wash out the fat-based blood components. You can wash your pad by hand, or in the washing machine along with other clothes.",
+      "content4": "To maximise the lifespan of your reusable pad, you can add a couple of drops of lavender, thyme or pine essential oils to the soaking water if you like, as they have natural disinfectant properties. If you prefer not to use essential oils white vinegar is also a very good option. When washing you can set the water temperature up to 60ºC, but be aware that 40ºC is more than enough. We always add a couple of spoonfuls of sodium bicarb directly into the drum or into the compartment with the soap. Finally, wash your pads with other clothes. This will make your load more eco-friendly and, at the same time, the items will rub against each other allowing for a more effective wash."
+   },
+   {
+      "id":3,
+      "name":"Risks of Using Menstrual Cups",
+      "image":"cupwoman",
+      "color1":"pastel12",
+      "color2":"pastel11",
+      "content1name": "Irritation",
+      "content2name": "Infection",
+      "content3name": "TSS",
+      "content4name": "Do the benefits outweigh the risks?",
+      "content1": "Irritation can happen for a number of reasons, and, for the most part, they’re all preventable. For example, inserting the cup without proper lubrication can cause discomfort. In many cases, applying a small amount of water-based lube to the outside of the cup can help prevent this. Be sure to read the manufacturer’s recommendations on the product packaging for further clarification. Irritation can also occur if the cup isn’t the right size or if it isn’t cleaned properly between uses. We’ll discuss cup selection and care later in this article.",
+      "content2": "Infection is a rare complication of menstrual cup use. If an infection does occur, it’s more likely from the transfer of bacteria on hands to the cup than from the cup itself. For example, yeast infections and bacterial vaginosis can develop if bacteria in the vagina — and subsequently vaginal pH — becomes imbalanced. You can reduce your risk by washing your hands thoroughly with warm water and antibacterial soap before handling the cup. You should also wash your cup with warm water and a mild, fragrance-free, water-based soap before and after use. One over-the-counter soap to try is Neutrogena Liquid Soap. Scent-free, oil-free cleansers made for infants are also good alternatives, such as Cetaphil Gentle Skin Cleanser or Dermeze Soap-Free Wash.",
+      "content3": "Toxic shock syndrome (TSS) is a rare but serious complication that can result from certain bacterial infections. It occurs when Staphylococcus or Streptococcus bacteria — which naturally exist on your skin, nose, or mouth — are pushed deeper into the body. TSS is typically associated with leaving a tampon inserted for longer than recommended or wearing a tampon with a higher-than-needed absorbency. TSS as a result of tampon use is rare. It’s even rarer when using menstrual cups. A 2019 review states five known reports of TSS associated with the use of a menstrual cup. You can reduce your risk for TSS by:  washing your hands thoroughly with warm water and antibacterial soap before removing or inserting your cup, cleaning your cup as recommended by the manufacturer (usually with warm water and a mild, fragrance-free, oil-free soap) before insertion, OR applying a small amount of water or water-based lube (per manufacturer’s instructions) to the outside of the cup to aid in insertion",
+      "content4": "The general medical consensus is that menstrual cups are safe to use. As long as you use the cup as directed, your overall risk for adverse side effects is minimal. Some people like them because they’re reusable and don’t have to be changed as often as other products. Whether they’re right for you ultimately comes down to your individual comfort level. If you’ve experienced recurrent vaginal infections and are concerned about increasing your risk, talk to a doctor or other healthcare professional before use. They can answer any questions you have and may be able to recommend a specific cup or other menstrual product."
+   }
+]
