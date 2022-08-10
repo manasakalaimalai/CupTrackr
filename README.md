@@ -1,9 +1,21 @@
-# CupTrackr
-*CupTrackr* is an iOS application developed on sustainble period tracking using the **SwiftUI** framework. It implements several APIS including AVKit and MapKit as well as integrates **Cloud Firestore** databases for realtime data syncing. 
+# CupTrackr: a sustainable menstrual tracking app
+<img align="left" src="https://user-images.githubusercontent.com/53469845/183949376-0bb5b2d8-0d0b-46eb-ae2c-632db2568de8.png" width= "200" height="200" />
 
-&nbsp;
+## Description 
+*CupTrackr* is an iOS application developed on sustainable period tracking using the SwiftUI framework. It implements several APIS including AVKit and MapKit as well as integrates Cloud Firestore databases for realtime data syncing.
+<br />
 
-*CupTrackr* allows users to take quizzes on sustainable menstruation, provides guidance for period symptoms, tracks menstrual cup flow, and, most importantly, notifies users when to change their cup. 
+*CupTrackr* is the first iOS app that helps users track their menstrual cup flow. This app was developed in hopes of promoting sustainable menstrual practices and thus, improving period equity. 
+
+## Features <br />
+
+
+- allows users to take quizzes on sustainable menstruation<br/>
+
+- allows users to take a Cup Quiz to help determine how often they should change their cup
+- mood tracker that provides guidance for period symptoms
+- tracks menstrual cup flow
+- notifies users when to change their cup. 
 
 &nbsp;
 
