@@ -1,4 +1,5 @@
 # CupTrackr: a sustainable menstrual tracking app
+![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
 <img align="left" src="https://user-images.githubusercontent.com/53469845/183949376-0bb5b2d8-0d0b-46eb-ae2c-632db2568de8.png" width= "200" height="200" />
 
 ## Description 
